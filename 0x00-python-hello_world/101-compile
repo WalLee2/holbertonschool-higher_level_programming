@@ -1,2 +1,5 @@
 #!/bin/bash
-python -m py_compile "$PYFILE"
+python3 -m py_compile "$PYFILE"
+cd __pycache__/
+mv main.cpython-34.pyc main.pyc
+mv main.pyc ..
