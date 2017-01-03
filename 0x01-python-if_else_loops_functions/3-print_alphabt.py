@@ -2,5 +2,4 @@
 for i in range(97, 123):
     if (i == 101 or i == 113):
         continue
-    alphabet = chr(i)
-    print(alphabet, end="")
+    print(chr(i), end="")
