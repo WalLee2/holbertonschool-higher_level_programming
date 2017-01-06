@@ -8,7 +8,7 @@ if __name__ == "__main__":
     elif(length - 1 == 1):
         print('{:d} argument: \n{:d}: {:s}'
               .format((length - 1), (length - 1), sys.argv[1]))
-    elif(length - 1 >= 2):
+    else:
         print('{:d} arguments:'.format(length - 1))
         for i in range(1, length):
             print('{:d}: {:s}'.format(i, sys.argv[i]))
