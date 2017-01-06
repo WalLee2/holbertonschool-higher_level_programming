@@ -5,4 +5,4 @@ if __name__ == "__main__":
     num = 0
     for i in range(1, length):
         num += int(sys.argv[i])
-        print('{:d}'.format(num))
+    print('{:d}'.format(num))
