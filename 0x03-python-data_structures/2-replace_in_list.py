@@ -4,3 +4,4 @@ def replace_in_list(list, idx, element):
         if (i == idx):
             list[i] = element
             return (list)
+    return (list)
