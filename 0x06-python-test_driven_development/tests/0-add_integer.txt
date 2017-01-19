@@ -169,6 +169,17 @@ Strings and numbers:
    Traceback (most recent call last):
    TypeError: a must be an integer
 
+
+Boolean and number:
+
+   Adding bool and number
+   ______________________
+   >>> add_integer(True, 1)
+   2
+   Adding bool and number
+   >>> add_integer(False, 1)
+   1
+
 None and Number:
 
    Adding a number and None
