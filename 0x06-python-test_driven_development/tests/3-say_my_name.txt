@@ -1,0 +1,63 @@
+``Print name module`` module
+=============================
+
+Using ``say_my_name`` from ``3-say_my_name``
+      >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Using name:
+
+Strings:
+	string and string
+	_________________
+	>>> say_my_name("Walton", "Lee")
+	My name is Walton Lee
+
+	string and empty variable
+	__________________________
+	>>> say_my_name("Walton", )
+	My name is Walton 
+
+	number and string
+	_________________
+	>>> say_my_name(1, "Lee")
+	first_name must be a string
+
+	String and list
+	_______________
+	>>> say_my_name("Walton", [1, 4, 5])
+	last_name must be a string
+
+	Passing no strings
+	__________________
+	>>> say_my_name()
+	Traceback (most recent call last):
+		  ...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+	Passing more than 2 arguments
+	_____________________________
+	>>> say_my_name("hello", "Walton", "Lee")
+	Traceback (most recent call last):
+		  ...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+	Empty first string
+	__________________
+	>>> say_my_name("")
+	My name is  
+
+
+	None and None
+	______________
+	>>> say_my_name(None, None)
+	first_name must be a string
+
+	String and None
+	_______________
+	>>> say_my_name("Wallee", None)
+	last_name must be a string
+
+	List of strings and set
+	_______________________
+	>>> say_my_name(["Holberton", "School"], {98, "Street"})
+	first_name must be a string
