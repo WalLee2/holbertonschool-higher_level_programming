@@ -1,0 +1,78 @@
+``print_square`` module
+=======================
+
+Importing ``print_square`` from ``4-print_square``
+	  >>> print_square = __import__('4-print_square').print_square
+
+Using print_square:
+
+      Printing out 5 x 5 squares
+      __________________________
+      >>> print_square(5)
+      #####
+      #####
+      #####
+      #####
+      #####
+
+      Printing out 0 squares
+      ______________________
+      >>> print_square(0)
+
+
+      Passing non int type
+      ____________________
+      >>> print_square(0.5)
+
+      Passing a number less than 0
+      ____________________________
+      >>> print_square([1, 2])
+      Traceback (most recent call last):
+      		...
+      TypeError: unorderable types: list() < int()
+
+      Passing nothing
+      _______________
+      >>> print_square()
+      Traceback (most recent call last):
+      TypeError: print_square() missing 1 required positional argument: 'size'
+
+      Passing a float
+      ________________
+      >>> print_square(20.34)
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+      ####################
+
+
+      Passing a negative float
+      ________________________
+      >>> print_square(-4.32)
+      Traceback (most recent call last):
+      TypeError: size must be >= 0
+
+      Passing a boolean
+      __________________
+      >>> print_square(True)
+      #
+
+      Passing a boolean
+      __________________
+      >>> print_square(False)
