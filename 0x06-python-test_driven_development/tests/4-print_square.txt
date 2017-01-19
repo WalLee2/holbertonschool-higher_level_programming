@@ -20,6 +20,12 @@ Using print_square:
       >>> print_square(0)
 
 
+      Passing a dictionary
+      ____________________
+      >>> print_square({'hello': 'world'})
+      Traceback (most recent call last):
+      TypeError: unorderable types: dict() < int()
+
       Passing non int type
       ____________________
       >>> print_square(0.5)
