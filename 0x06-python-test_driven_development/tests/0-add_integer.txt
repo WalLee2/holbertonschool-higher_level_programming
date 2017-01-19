@@ -176,7 +176,9 @@ Boolean and number:
    ______________________
    >>> add_integer(True, 1)
    2
+
    Adding bool and number
+   ______________________
    >>> add_integer(False, 1)
    1
 
