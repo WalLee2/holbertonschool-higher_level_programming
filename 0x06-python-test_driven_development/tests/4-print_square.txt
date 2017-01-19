@@ -61,6 +61,11 @@ Using print_square:
       ####################
       ####################
 
+      Passing a negative integer
+      __________________________
+      >>> print_square(-1)
+      Traceback (most recent call last):
+      TypeError: size must be >= 0
 
       Passing a negative float
       ________________________
