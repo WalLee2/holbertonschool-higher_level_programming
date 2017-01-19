@@ -10,15 +10,146 @@ We first import ``add`` from the ``add_integer`` module:
 
 Using the module:
 
-   Adding two numbers
+Adding no input:
+
+   Adding no input with no input
+   _____________________________
+   >>> add_integer()
+   Traceback (most recent call last):
+   	     ...
+   TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+   Adding a number with no input
+   _____________________________
+   >>> add_integer(2, )
+   Traceback (most recent call last):
+   	     ...
+   TypeError: add_integer() missing 1 required positional argument: 'b'
+
+Adding two numbers:
+
+   Adding two positive numbers
    ------------------
    >>> add_integer(2, 3)
    5
+
+   Adding two negative numbers
+   ___________________________
+   >>> add_integer(-2, -3)
+   -5
+
+   Adding one neg one pos number
+   _____________________________
+   >>> add_integer(-2, 3)
+   1
+
+   Adding one pos one neg number
+   _____________________________
+   >>> add_integer(3, -2)
+   1
+
+   Adding two pos floats
+   _____________________
+   >>> add_integer(96.2, 2.9)
+   98
+
+   Adding one float and one negative float
+   _______________________________________
+   >>> add_integer(100.1, -2.9)
+   98
+
+   Adding one negative float and one positive float
+   ________________________________________________
+   >>> add_integer(-2.9, 100.1)
+   98
+
+   Adding two negative floats
+   __________________________
+   >>> add_integer(-2.9, -96.2)
+   -98
+
+   One positive float, one positive integer
+   ________________________________________
+   >>> add_integer(10.9, 2)
+   12
+
+   One positive integer, one positive float
+   ________________________________________
+   >>> add_integer(2, 10.9)
+   12
+
+   One neg int, one pos float
+   ________________________
+   >>> add_integer(-2, 10.9)
+   8
+
+   One neg float, one pos int
+   __________________________
+   >>> add_integer(-10.9, 2)
+   -8
+
+   One pos float, one neg int
+   __________________________
+   >>> add_integer(10.9, -2)
+   8
+
+   One pos int, one neg float
+   __________________________
+   >>> add_integer(2, -10.9)
+   -8
+
+   One neg int, one neg float
+   __________________________
+   >>> add_integer(-2, -10.9)
+   -12
+
+   One neg float, one neg int
+   __________________________
+   >>> add_integer(-10.9, -2)
+   -12
 
    Adding two big numbers
    ______________________
    >>> add_integer(1111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222223435467866765443534434222222254444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666777777777777777777777777777777888888888888888888888888888888899999999999999999999999990000000000000000000, 11111111111111111111111111111111111111111111111111222222222222222222222222222333333333333333333334567788888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
    11111111111111111111111111111111111111111111111111222222222222222222222222222333333333333333333334568900000011111111111111111111111111111111111111111111111111112222222222222222222222222222222222223435467866765443534434222222254444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666777777777777777777777777777777888888888888888888888888888888899999999999999999999999989999999999999999999
+
+   Adding two big negative numbers
+   _______________________________
+   >>> add_integer(-1111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222223435467866765443534434222222254444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666777777777777777777777777777777888888888888888888888888888888899999999999999999999999990000000000000000000, -1111111111111111111111111111111111111111111111111222222222222222222222222222333333333333333333334567788888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
+   -1111111111111111111111111111111111111111111111111222222222222222222222222222333333333333333333334568900000011111111111111111111111111111111111111111111111111112222222222222222222222222222222222223435467866765443534434222222254444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555666666666666666666666666666666777777777777777777777777777777888888888888888888888888888888899999999999999999999999989999999999999999999
+
+   Adding infinity b
+   _______________
+   >>> add_integer(1, (float("inf")))
+   Traceback (most recent call last):
+   	 ...
+   OverflowError: cannot convert float infinity to integer
+
+
+   Adding infinity a
+   _________________
+   >>> add_integer(float("inf"), 1)
+   Traceback (most recent call last):
+   	 ...
+   OverflowError: cannot convert float infinity to integer
+
+
+   Adding negative infinity a
+   __________________________
+   >>> add_integer(-float("inf"), 1)
+   Traceback (most recent call last):
+   	     ...
+   OverflowError: cannot convert float infinity to integer
+
+
+   Adding negative infinity b
+   __________________________
+   >>> add_integer(1, -float("inf"))
+   Traceback (most recent call last):
+   	     ...
+   OverflowError: cannot convert float infinity to integer
+
+Strings and numbers:
 
    Adding a number and a string
    ----------------------------
@@ -26,6 +157,19 @@ Using the module:
    Traceback (most recent call last):
    TypeError: b must be an integer
 
+   Adding a string and a number
+   ____________________________
+   >>> add_integer("hello", 2)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+   Adding a string and a string
+   ____________________________
+   >>> add_integer("hello", 'world')
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+Boolean and numbers:
 
    Adding a number and a boolean
    _____________________________
@@ -34,22 +178,116 @@ Using the module:
    Traceback (most recent call last):
    TypeError: b must be an integer
 
+   Adding a boolean and a number
+   _____________________________
 
-   Adding two strings
-   __________________
-   >>> add_integer("Hello", "World")
+   >>> add_integer(False, 2)
    Traceback (most recent call last):
    TypeError: a must be an integer
 
-   Adding None
+   Adding a boolean and a boolean
+   ______________________________
+   >>> add_integer(False, True)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+None and Number:
+
+   Adding a number and None
+   ________________________
+   >>> add_integer(2, None)
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+   Adding None and a number
    ___________
    >>> add_integer(None, 2)
    Traceback (most recent call last):
    TypeError: a must be an integer
 
-   Adding Tuples
-   _____________
-   >>> t = 12345, 9876, 'hello'
-   >>> add_integer(t, 3)
+
+   Adding None and None
+   ___________
+   >>> add_integer(None, 2)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+Sets and Number
+
+   Adding a set and a number
+   ___________________________
+   >>> add_integer({12345, 9876, 'hello'}, 3)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+   Adding a number and a set
+   _________________________
+   >>> add_integer(3, {12345, 9876, 'hello'})
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+   Adding a set and a set
+   ______________________
+   >>> add_integer({12345, 9876, 'hello'}, {29505, 2850, 'world'})
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+Tuples and Number
+
+   Adding a tuple and a number
+   ___________________________
+   >>> add_integer((1, 2, 3), 2)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+   Adding a number and a tuple
+   ___________________________
+   >>> add_integer(2, (1, 2, 3))
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+   Adding a tuple and a tuple
+   __________________________
+   >>> add_integer((1, 2, 3), (1, 2, 3))
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+Functions and Number
+
+   Adding a number and a function
+   ______________________________
+   >>> add_integer((lambda x: x), 2.5)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+   Adding a function and a number
+   ______________________________
+   >>> add_integer(2.5, (lambda x: x))
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+   Adding a function and a function
+   ________________________________
+   >>> add_integer((lambda x: x), (lambda x: x))
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+Dictionaries and Number
+
+   Adding a dictionary and a number
+   ________________________________
+   >>> add_integer({1:"yo"}, 2)
+   Traceback (most recent call last):
+   TypeError: a must be an integer
+
+   Adding a number and a dictionary
+   ________________________________
+   >>> add_integer(2, {1:"yo"})
+   Traceback (most recent call last):
+   TypeError: b must be an integer
+
+   Adding a dictionary and a dictionary
+   ____________________________________
+   >>> add_integer({1: "yo"}, {2: "bro"})
    Traceback (most recent call last):
    TypeError: a must be an integer
