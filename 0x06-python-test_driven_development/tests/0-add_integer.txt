@@ -169,28 +169,6 @@ Strings and numbers:
    Traceback (most recent call last):
    TypeError: a must be an integer
 
-Boolean and numbers:
-
-   Adding a number and a boolean
-   _____________________________
-
-   >>> add_integer(2, True)
-   Traceback (most recent call last):
-   TypeError: b must be an integer
-
-   Adding a boolean and a number
-   _____________________________
-
-   >>> add_integer(False, 2)
-   Traceback (most recent call last):
-   TypeError: a must be an integer
-
-   Adding a boolean and a boolean
-   ______________________________
-   >>> add_integer(False, True)
-   Traceback (most recent call last):
-   TypeError: a must be an integer
-
 None and Number:
 
    Adding a number and None
