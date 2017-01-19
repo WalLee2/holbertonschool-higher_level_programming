@@ -31,6 +31,13 @@ Using print_square:
       		...
       TypeError: unorderable types: list() < int()
 
+      Passing more than one argument
+      ______________________________
+      >>> print_square(1, 2)
+      Traceback (most recent call last):
+      		...
+      TypeError: print_square() takes 1 positional argument but 2 were given
+
       Passing nothing
       _______________
       >>> print_square()
@@ -81,3 +88,4 @@ Using print_square:
       Passing a boolean
       __________________
       >>> print_square(False)
+
