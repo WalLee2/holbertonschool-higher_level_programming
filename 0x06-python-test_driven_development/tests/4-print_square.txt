@@ -89,9 +89,11 @@ Using print_square:
       Passing a boolean
       __________________
       >>> print_square(True)
-      #
+      Traceback (most recent call last):
+      TypeError: size must be an integer
 
       Passing a boolean
       __________________
       >>> print_square(False)
-
+      Traceback (most recent call last):
+      TypeError: size must be an integer
