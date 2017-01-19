@@ -314,3 +314,21 @@ Multiplying dict and number
       >>> mul({"a":1, "b":[1, 2, 3]}, 2)
       Traceback (most recent call last):
       TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+
+Multiplying Function and number
+
+      Function and number
+      ___________________
+      >>> mul(3, lambda x: x)
+      Traceback (most recent call last):
+      TypeError: unsupported operand type(s) for *: 'int' and 'function'
+
+Incomplete argument
+
+      >>> mul(1)
+      Traceback (most recent call last):
+      TypeError: mul() missing 1 required positional argument: 'b'
+
+      >>> mul(1, 2, 3)
+      Traceback (most recent call last):
+      TypeError: mul() takes 2 positional arguments but 3 were given
