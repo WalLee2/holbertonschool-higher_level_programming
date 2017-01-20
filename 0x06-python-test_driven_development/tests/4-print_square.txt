@@ -5,6 +5,11 @@ Importing ``print_square`` from ``4-print_square``
 	  >>> print_square = __import__('4-print_square').print_square
 
 Using print_square:
+      Inserting a string
+      __________________
+      >>> print_square("Hello")
+      Traceback (most recent call last):
+      TypeError: size must be an integer
 
       Printing out 5 x 5 squares
       __________________________
@@ -24,7 +29,7 @@ Using print_square:
       ____________________
       >>> print_square({'hello': 'world'})
       Traceback (most recent call last):
-      TypeError: unorderable types: dict() < int()
+      TypeError: size must be an integer
 
       Passing non int type
       ____________________
@@ -35,7 +40,7 @@ Using print_square:
       >>> print_square([1, 2])
       Traceback (most recent call last):
       		...
-      TypeError: unorderable types: list() < int()
+      TypeError: size must be an integer
 
       Passing more than one argument
       ______________________________
