@@ -12,6 +12,11 @@ Importing ``matrix_divided`` from ``2-matrix_divided``
 Using matrix_divided
 ____________________
 
+	>>> matrix_divided([[1, 2, 3], [1, 2, {2: 1}]], 2)
+	Traceback (most recent call last):
+                  ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 	div being negative
 	__________________
 	>>> matrix_divided([[1, 2], [2, 1]], -2)
