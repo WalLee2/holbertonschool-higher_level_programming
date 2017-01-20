@@ -1,0 +1,85 @@
+``matrix_divided`` module
+=========================
+
+Using matrix_divided
+____________________
+
+Importing ``matrix_divided`` from ``2-matrix_divided``
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Using matrix_divided
+____________________
+
+	Passing an empty list and div with a value of one
+	_________________________________________________
+	>>> matrix_divided([], 1)
+	Traceback (most recent call last):
+		   ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	Passing an empty 2D array and div with a value of one
+	_____________________________________________________
+	>>> matrix_divided([[]], 1)
+	Traceback (most recent call last):
+		  ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	Passing a list with two lists as an argument
+	_____________________________________________
+	>>> matrix_divided([[], []], 1)
+	Traceback (most recent call last):
+		  ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	Passing a matrix with two lists inside with one of the lists containing
+	a string
+	_______________________________________________________________________
+	>>> matrix_divided([[1, 2, 3], [4, 5,"a"]], 3)
+	Traceback (most recent call last):
+		  ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	Matrix containing uneven number of elements
+	____________________________________________
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3)
+	Traceback (most recent call last):
+		  ...
+	TypeError: Each row of the matrix must have the same size
+
+
+	Giving only one argument
+	_________________________
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], )
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+	Returning a new matrix
+	______________________
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> new = matrix_divided(matrix, 3.151570)
+	>>> new == matrix
+	False
+
+	Divide by True
+	______________
+	>>> matrix_divided([[1, 2], [3, 4]], True)
+	[1.0, 2.0, 3.0, 4.0]
+
+	Divide by False
+	_______________
+	>>> matrix_divided([[1, 2], [3, 4]], False)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+	Matrix containing True/False statements
+	_______________________________________
+	>>> matrix_divided([[True, 2], [False, 4]], 2)
+	[0.5, 1.0, 0.0, 2.0]
