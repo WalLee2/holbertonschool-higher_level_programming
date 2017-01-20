@@ -17,6 +17,11 @@ ____________________
 	>>> matrix_divided([[1, 2], [2, 1]], -2)
 	[-0.5, -1.0, -1.0, -0.5]
 
+	>>> matrix_divided(1, 7, 9)
+	Traceback (most recent call last):
+                  ...
+        TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
 	Adding extra arguments
 	______________________
 	>>> matrix_divided([[1, 2, 3], [4, 9, 15]], 2, 3)
