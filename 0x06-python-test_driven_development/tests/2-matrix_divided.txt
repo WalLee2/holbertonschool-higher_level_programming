@@ -12,6 +12,20 @@ Importing ``matrix_divided`` from ``2-matrix_divided``
 Using matrix_divided
 ____________________
 
+	Passing None to the matrix
+	__________________________
+	>>> matrix_divided(None, 1)
+	Traceback (most recent call last):
+		  ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	Passing None to div
+	___________________
+	>>> matrix_divided([[1, 2, 3], [5, 7, 9]], None)
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+
 	Passing an empty list and div with a value of one
 	_________________________________________________
 	>>> matrix_divided([], 1)
