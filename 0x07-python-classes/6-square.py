@@ -20,15 +20,11 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.size = size
-        self.position = position
+        self.__position = position
 
     @property
     def size(self):
         return self.__size
-
-    @property
-    def position(self):
-        return self.position
 
     @size.setter
     def size(self, value):
@@ -38,16 +34,25 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
+    def position(self):
+        return self.__position
+
     @position.setter
     def position(self, value):
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(position[0], int) && not position[0] > 0:
+        if not isinstance(self.__position[0], int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(position[1], int) && not position[1] > 0:
+        if not isinstance(self.__position[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
+        if not self.__position[0] >= 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not self.__position[1] >= 1:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         return self.__size * self.__size
@@ -56,9 +61,9 @@ class Square:
         if (self.size == 0):
             print('\n')
             return
-        if self.position[1] >= 1 and self.__size is not 0:
-            print("{}".format('\n' * int(self.position[1])), end="")
+        if self.__position[1] >= 1 and self.__size is not 0:
+            print("{}".format('\n' * int(self.__position[1])), end="")
         for i in range(0, int(self.__size)):
-            if self.position[0] >= 0:
-                print("{}{}".format(' ' * int(self.position[0]),
+            if self.__position[0] >= 0:
+                print("{}{}".format(' ' * int(self.__position[0]),
                                     "#" * int(self.__size)))
