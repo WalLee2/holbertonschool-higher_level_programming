@@ -4,11 +4,12 @@ Expanding 4-rectangle to include:
 Recognize and print a statement once the Rectangle was deleted
 """
 
+
 class Rectangle:
     """
     Printing a statement when the del is used
     """
-    number_of_instances = 0;
+    number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
@@ -38,8 +39,8 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        if ((not isinstance(self.__height, int)) or
-            isinstance(self.__height, bool)):
+        if not isinstance(self.__height, int) or \
+           isinstance(self.__height, bool):
             raise TypeError("height must be an integer")
         if self.__height < 0:
             raise ValueError("height must be >= 0")
