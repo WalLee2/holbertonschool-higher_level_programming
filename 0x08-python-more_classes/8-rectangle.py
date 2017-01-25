@@ -68,7 +68,7 @@ class Rectangle:
         return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
-        print ("Bye rectangle...")
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
