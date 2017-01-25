@@ -59,7 +59,7 @@ class Rectangle:
             return ""
         product = ""
         for i in range(0, self.__height):
-            product = (product + (str(self.print_symbol * self.__width)))
+            product = product + "{}".format(self.print_symbol * self.__width)
             product = product + '\n'
         product = product.strip('\n')
         return product
