@@ -1,6 +1,7 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
-Function that returns the list of availables attributes and methods of an object
+Function that returns the list of availables
+attributes and methods of an object
 """
 
 
