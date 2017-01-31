@@ -7,8 +7,8 @@ A class Square that inherits from Rectangle
 
 class Square(Rectangle):
     """
-    Class Square inheriting from Rectangle. Returning a string and returning the result
-    of size * size.
+    Class Square inheriting from Rectangle.
+    Returning a string and returning the result of size * size.
     """
     def __init__(self, size):
         self.__size = size
