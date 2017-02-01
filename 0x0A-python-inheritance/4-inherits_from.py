@@ -12,3 +12,5 @@ def inherits_from(obj, a_class):
     """
     if issubclass(type(obj), a_class) and a_class is not type(obj):
             return True
+    else:
+        return False
