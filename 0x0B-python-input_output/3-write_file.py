@@ -10,7 +10,7 @@ def write_file(filename="", text=""):
     Opening the file in read mode and returning the number of characters.
     """
     with open(filename, mode="w", encoding="UTF-8") as my_file:
-        my_file.write("Holberton School is so cool!\n")
+        my_file.write(text)
     with open(filename, 'r', encoding="UTF-8") as my_file:
         c_count = 0
         for i in my_file:
