@@ -8,7 +8,7 @@ def number_of_lines(filename=""):
     """
     Open file and add 1 to counter for each line read.
     """
-    with open("my_file_0.txt", 'r', encoding="UTF-8") as my_file:
+    with open(filename, 'r', encoding="UTF-8") as my_file:
         lineCount = 0
         while True:
             line = my_file.readline()
