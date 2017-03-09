@@ -9,6 +9,6 @@ if __name__ == '__main__':
     find = sys.argv[4]
     for row in cursor.fetchall():
         if (row[1] == find):
-            print (row)
+            print(row)
     db.close()
     cursor.close()
