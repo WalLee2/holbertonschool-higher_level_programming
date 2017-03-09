@@ -11,6 +11,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
+    switch = 0
     for objects in session.query(State):
         if (objects.name == sys.argv[4]):
             print("{}".format(objects.id))
