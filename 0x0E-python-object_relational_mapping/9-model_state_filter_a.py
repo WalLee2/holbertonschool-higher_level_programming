@@ -12,5 +12,5 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     for objects in session.query(State).order_by(State.id).filter(
-            State.name.like == '%a%'):
+            State.name.like('%a%')):
         print("{}: {}".format(objects.id, objects.name))
