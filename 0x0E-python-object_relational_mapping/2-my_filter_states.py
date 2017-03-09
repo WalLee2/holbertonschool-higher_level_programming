@@ -10,6 +10,6 @@ if __name__ == '__main__':
     cursor.execute(check)
     for row in cursor.fetchall():
         if (row[1] == sys.argv[4]):
-            print (row)
+            print(row)
     db.close()
     cursor.close()
