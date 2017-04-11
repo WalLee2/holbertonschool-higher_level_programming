@@ -3,6 +3,7 @@
 Send a request to the URL and display the response decoded in utf-8
 """
 import urllib.request
+import urllib.error
 import sys
 
 try:
