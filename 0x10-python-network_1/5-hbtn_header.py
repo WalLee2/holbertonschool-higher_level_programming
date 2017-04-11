@@ -7,6 +7,5 @@ import sys
 
 if __name__ == "__main__":
     r = requests.get(sys.argv[1])
-    for key, values in r.headers.items():
-        if key == "X-Request-Id":
-            print(values)
+    value = r.headers.get('X-Request-Id')
+    print(value)
