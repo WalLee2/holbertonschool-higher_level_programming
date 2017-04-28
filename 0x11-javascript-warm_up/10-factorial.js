@@ -14,4 +14,4 @@ function factorial (a) {
   }
 }
 
-console.log(factorial(process.argv[0]));
+console.log(factorial(process.argv[2]));
