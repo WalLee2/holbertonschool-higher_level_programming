@@ -8,10 +8,10 @@ function factorial (a) {
       count = usrIn * count;
       usrIn--;
     }
-    return(count);
+    return (count);
   } else {
     return (1);
   }
 }
 
-console.log(factorial(process.argv[0]))
+console.log(factorial(process.argv[0]));
