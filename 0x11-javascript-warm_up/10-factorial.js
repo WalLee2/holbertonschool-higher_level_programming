@@ -1,13 +1,17 @@
 #!/usr/bin/node
 
-if (Number(process.argv[2])) {
-  let usrIn = Number(process.argv[2]);
-  let count = 1;
-  for (let i = usrIn; i > 0; i--) {
-    count = usrIn * count;
-    usrIn--;
+function factorial (a) {
+  if (a) {
+    let usrIn = Number(process.argv[2]);
+    let count = 1;
+    for (let i = usrIn; i > 0; i--) {
+      count = usrIn * count;
+      usrIn--;
+    }
+    return(count);
+  } else {
+    return (1);
   }
-  console.log(count);
-} else {
-  console.log('1');
 }
+
+console.log(factorial(process.argv[0]))
