@@ -6,13 +6,13 @@ exports.Rectangle = function (w, h) {
     this.height = h;
   }
   this.rotate = function () {
-    let temp = w;
-    w = h;
-    h = temp;
+    let temp = this.width;
+    this.width = this.height;
+    this.height = temp;
   };
   this.double = function () {
-    w = w * 2;
-    h = h * 2;
+    this.width = this.width * 2;
+    this.height = this.height * 2;
   };
   this.print = function () {
     for (let i = 0; i < h; i++) {
