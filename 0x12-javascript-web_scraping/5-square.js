@@ -5,5 +5,5 @@ exports.Square = function (size) {
   Rectangle.call(this, size, size);
   this.size = size;
 };
-exports.Square.prototype = Object.create(exports.Rectangle.prototype);
+exports.Square.prototype = Object.create(Rectangle.prototype);
 exports.Square.prototype.constructor = exports.Square;
