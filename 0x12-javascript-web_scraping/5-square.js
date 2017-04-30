@@ -8,3 +8,4 @@ Square.prototype = Object.create(Rectangle.prototype);
 Square.constructor = Square;
 
 exports.Square = Square;
+Rectangle.constructor();
