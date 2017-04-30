@@ -7,8 +7,8 @@ exports.Rectangle = function (w, h) {
   }
   this.print = function () {
     if (w > 0 && h > 0) {
-      for (let i = 0; i < h; i++) {
-        console.log('X'.repeat(w));
+      for (let i = 0; i < this.height; i++) {
+        console.log('X'.repeat(this.width));
       }
     }
   };
