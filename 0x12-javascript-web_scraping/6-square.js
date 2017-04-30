@@ -6,15 +6,8 @@ exports.Square = function (size) {
 };
 exports.Square.prototype = Object.create(exports.Square.prototype);
 exports.Square.prototype.constructor = exports.Square;
-
-exports.Square.prototype.charPrint = function (c) {
-  if (c === undefined || c === null) {
-    for (let i = 0; i < this.size; i++) {
-      console.log('X'.repeat(this.size));
-    }
-  } else {
-    for (let i = 0; i < this.size; i++) {
-      console.log(c.repeat(this.size));
-    }
+exports.Square.prototype.charPrint = function (c = 'X') {
+  for (let i = 0; i < this.size; i++) {
+    console.log(c.repeat(this.size));
   }
-}
+};
