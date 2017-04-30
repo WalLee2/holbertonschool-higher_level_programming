@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const Rectangle = require('./4-rectangle').Rectangle;
-const Square = function (size) {
+function Square (size) {
   Rectangle.call(this, size, size);
   this.size = size;
 };
