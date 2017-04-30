@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle').Rectangle;
+const s = require('./5-square').Square;
 exports.Square = function (size) {
-  Rectangle.call(this, size, size);
-  this.size = size;
+  s.call(this, size);
   this.charPrint = function (c) {
     if (c === undefined || c === null) {
       for (let i = 0; i < this.size; i++) {
@@ -16,5 +15,5 @@ exports.Square = function (size) {
     }
   };
 };
-exports.Square.prototype = Object.create(Rectangle.prototype);
+exports.Square.prototype = Object.create(exports.Square.prototype);
 exports.Square.prototype.constructor = exports.Square;
