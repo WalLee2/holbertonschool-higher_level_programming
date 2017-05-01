@@ -7,5 +7,5 @@ function Square (size) {
 Square.prototype = Object.create(Rectangle.prototype);
 Square.constructor = Square;
 
+exports.Rectangle = Rectangle;
 exports.Square = Square;
-Rectangle.constructor();
